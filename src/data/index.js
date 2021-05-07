@@ -1467,3 +1467,19 @@ export const TAGS = [
       'https://d1qq4h2hdonqwg.cloudfront.net//var/www/tourmega-new/public/uploads/country/scene_images/86/sea-418742_1280.jpg',
   },
 ];
+
+export const SAMPLE_DESTINATION_DATA = {
+  path: '/tours/bangkok-by-night-temples-markets-and-food-by-tuk-tuk',
+  price_in_usd: 68.88,
+  name: 'Bangkok by Night: Temples, Markets and Food by Tuk-Tuk',
+  booking_flow_type: 1,
+  average_rating: 5,
+  duration_in_minutes: 240,
+  number_of_reviews: 56,
+  id: 215522,
+  thumbnail_url:
+    'https://d1qq4h2hdonqwg.cloudfront.net/uploads/tour_image/file/35d44a67-66f4-481b-8004-5f9f27c986c1/82da09ee-2597-418a-9301-2d1fec799984_thumb.jpg',
+  city_id: 27,
+  city: 'Bangkok',
+  favorited: false,
+};
