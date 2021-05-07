@@ -8,6 +8,7 @@
 
 import React from 'react';
 import {View, FlatList, Text, TouchableOpacity} from 'react-native';
+import PropTypes from 'prop-types';
 
 import Styles from './styles';
 
@@ -38,3 +39,24 @@ const PlaceList = props => {
 };
 
 export default PlaceList;
+
+PlaceList.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      code: PropTypes.string,
+      slug: PropTypes.string,
+      introduction: PropTypes.string,
+      country_id: PropTypes.number,
+      image: PropTypes.string,
+    }),
+  ).isRequired,
+  handlePlaceSelection: PropTypes.func.isRequired,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  listStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  listItemContainerStyle: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+};
