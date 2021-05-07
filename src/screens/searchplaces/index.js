@@ -17,7 +17,7 @@ import TagCloud from '../../components/tagcloud';
 
 const {width} = Dimensions.get('window');
 
-const SearchPlaces = () => {
+const SearchPlaces = ({navigation}) => {
   const [searchKeyword, setSearchKeyword] = useState(null);
   const [placeSearchResult, setPlaceSearchResult] = useState([]);
   const [recentSearches, setRecentSearches] = useState([]);
@@ -28,9 +28,10 @@ const SearchPlaces = () => {
 
   const handleSearch = keyword => {
     setSearchKeyword(keyword);
+    const formattedKeyWord = keyword.toLowerCase();
     if (keyword !== '') {
-      let filteredList = PLACES.filter(function (item) {
-        return item.name.includes(keyword);
+      let filteredList = PLACES.filter(function (place) {
+        return place.name.toLowerCase().includes(formattedKeyWord);
       });
       if (filteredList.length > 0) {
         setPlaceSearchResult(filteredList);
@@ -47,15 +48,37 @@ const SearchPlaces = () => {
    */
 
   const showDestinations = place => {
-    let newSearch = [];
-    newSearch.push({id: place.id, name: place.name});
-    setRecentSearches(previousSearch => [...previousSearch, ...newSearch]);
+    // Step1: Set search keyword
     setSearchKeyword(place.name);
+
+    // Step2: Update recent search items
+    let newSearch = recentSearches;
+
+    // Step2a: Check whether the keyword was
+    // already searched recently
+    if (!newSearch.some(search => search.name === place.name)) {
+      // Store only last few recent searched items
+      if (newSearch.length > 3) {
+        newSearch.shift();
+      }
+      newSearch.push(place);
+      newSearch.reverse();
+    }
+    setRecentSearches(newSearch);
+
+    // Step3: Clear filtered places list data
     clearPlacesSearchResult();
+
+    // Step4: Navigate to the destinations screen
+    navigation.navigate('Destinations', {place});
   };
 
   const clearPlacesSearchResult = () => {
     setPlaceSearchResult([]);
+  };
+
+  const handleTagPress = place => {
+    navigation.navigate('Destinations', {place});
   };
 
   return (
@@ -95,7 +118,7 @@ const SearchPlaces = () => {
         {placeSearchResult.length === 0 && (
           <View style={Styles.topSearchesContainer}>
             <Text style={Styles.listTitle}>Top Searches</Text>
-            <TagCloud data={TAGS} />
+            <TagCloud handleTagPress={handleTagPress} data={TAGS} />
           </View>
         )}
       </View>

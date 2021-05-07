@@ -1427,23 +1427,43 @@ export const PLACES = [
 
 export const TAGS = [
   {
-    id: '#12',
-    name: 'United States',
+    id: 74,
+    name: 'United Kingdom',
+    slug: 'united-kingdom',
+    code: 'GB',
+    introduction: '',
+    image: null,
   },
   {
-    id: '#13',
-    name: 'Dubai',
+    id: 82,
+    name: 'Milan',
+    country_id: 108,
+    slug: 'milan',
   },
   {
-    id: '#14',
-    name: 'Sint Maarten',
+    id: 36,
+    name: 'Berlin',
+    country_id: 54,
+    slug: 'berlin',
   },
   {
-    id: '#15',
-    name: 'United Arab Emirates',
+    id: 154,
+    name: 'Mexico',
+    slug: 'mexico',
+    code: 'MX',
+    introduction:
+      '<p dir="ltr" style="text-align: justify;"><b id="docs-internal-guid-c63ba432-fefa-5d87-61df-a3c73fe63833">Officially named Estados Unidos Mexicanos (United Mexican States), Mexico is made up of 31 states and one federal district and home to 121 million inhabitants in a land area roughly three times the size of Texas. </b></p>\r\n\r\n<p dir="ltr" style="text-align: justify;"><b id="docs-internal-guid-c63ba432-fefa-5d87-61df-a3c73fe63833">Given its size, which is often underappreciated by travelers, Mexico is able to maintain an immensely diverse environment. Whether it be cultural, racial, geographic, climatic, or biodiversity, the country offers travelers options abound to see, taste, and experience many different types of Mexico. </b></p>\r\n\r\n<p dir="ltr" style="text-align: justify;"><b id="docs-internal-guid-c63ba432-fefa-5d87-61df-a3c73fe63833">From dusty desert towns, pristine beaches, exotic rainforests, or the dense concrete jungle of Mexico City, the country is sure to amaze and excite the senses. See below for some of the diverse and exciting tours and activities that can be booked through TourMega and have wonderful time in Mexico.</b></p>\r\n\r\n<p style="text-align: justify;"><b id="docs-internal-guid-c63ba432-fefa-5d87-61df-a3c73fe63833">Official Language: Spanish / Currency: Peso / Largest City: Mexico City / Main Sports: Futbol (soccer) and Boxing</b></p>\r\n',
+    image:
+      'https://d1qq4h2hdonqwg.cloudfront.net//var/www/tourmega-new/public/uploads/country/scene_images/154/3ca0df2a-72d0-4fd7-81c2-b49aa4a4aa04.jpg',
   },
   {
-    id: '#16',
-    name: 'Jordan',
+    id: 86,
+    name: 'Greece',
+    slug: 'greece',
+    code: 'GR',
+    introduction:
+      '<p style="text-align: justify;">With such a deep and storied history, few other countries have had as large of an impact on modern society as Greece. Considered the birthplace of western civilization, the people and ideas from ancient Greece have impacted many areas of our lives from firsts in maritime and navigation to the founding of the Olympic Games.<br />\r\n<br />\r\nWhile we can list countless examples of Greek influence on our lives today, you&rsquo;d be better served visiting this beautiful country, seeing the many ancient artifacts up close, hopping the world famous islands, and enjoying amazing food cooked by someone whose recipe is likely centuries old, if not older<br />\r\n<br />\r\nOfficial Language: Greek / Currency: Euro / Largest City: Athens / National Sport: Sumo Wrestling</p>\r\n',
+    image:
+      'https://d1qq4h2hdonqwg.cloudfront.net//var/www/tourmega-new/public/uploads/country/scene_images/86/sea-418742_1280.jpg',
   },
 ];
