@@ -8,6 +8,7 @@
 
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
+import PropTypes from 'prop-types';
 
 import Styles from './styles';
 
@@ -27,3 +28,18 @@ const TagCloud = props => {
 };
 
 export default TagCloud;
+
+TagCloud.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      code: PropTypes.string,
+      slug: PropTypes.string,
+      introduction: PropTypes.string,
+      country_id: PropTypes.number,
+      image: PropTypes.string,
+    }),
+  ).isRequired,
+  handleTagPress: PropTypes.func.isRequired,
+};
