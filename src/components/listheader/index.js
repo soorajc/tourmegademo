@@ -8,6 +8,7 @@
 
 import React from 'react';
 import {View, Text, ImageBackground} from 'react-native';
+import PropTypes from 'prop-types';
 
 import Styles from './styles';
 
@@ -33,3 +34,9 @@ const ListHeader = props => {
 };
 
 export default ListHeader;
+
+ListHeader.propTypes = {
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  subTitle: PropTypes.string.isRequired,
+};
