@@ -19,6 +19,7 @@ const PlaceList = props => {
         props.containerStyle ? props.containerStyle : Styles.placeListContainer
       }>
       <FlatList
+        bounces={false}
         style={props.listStyle ? props.listStyle : Styles.placeList}
         data={props.data}
         renderItem={({item, index}) => (
