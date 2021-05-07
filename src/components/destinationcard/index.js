@@ -9,6 +9,7 @@
 import React from 'react';
 import {View, Text, Dimensions, ImageBackground} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import PropTypes from 'prop-types';
 
 import Styles from './styles';
 const {width} = Dimensions.get('window');
@@ -60,3 +61,8 @@ const DestinationCard = props => {
 };
 
 export default DestinationCard;
+
+DestinationCard.propTypes = {
+  index: PropTypes.number.isRequired,
+  destination: PropTypes.object.isRequired,
+};
