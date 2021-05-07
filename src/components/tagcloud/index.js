@@ -15,7 +15,10 @@ const TagCloud = props => {
   return (
     <View style={Styles.container}>
       {props.data.map(item => (
-        <TouchableOpacity key={item.id} style={Styles.tagContainer}>
+        <TouchableOpacity
+          onPress={() => props.handleTagPress(item)}
+          key={item.id}
+          style={Styles.tagContainer}>
           <Text style={Styles.tag}>{item.name}</Text>
         </TouchableOpacity>
       ))}
