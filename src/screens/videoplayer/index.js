@@ -78,7 +78,7 @@ const VideoPlayer = ({navigation}) => {
   };
 
   const handleTagPress = place => {
-    navigation.navigate('Destinations', {place});
+    navigation.navigate('DestinationsSuccess', {place});
   };
 
   return (
@@ -87,14 +87,6 @@ const VideoPlayer = ({navigation}) => {
         <View style={Styles.searchBoxContainer}>
           <View style={Styles.searchIconContainer}>
             <Icon name="search" size={width * 0.06} color="black" />
-          </View>
-          <View style={Styles.searchInputContainer}>
-            <TextInput
-              style={Styles.searchInput}
-              onChangeText={handleSearch}
-              value={searchKeyword}
-              placeholder="Search your destination"
-            />
           </View>
         </View>
       </View>
