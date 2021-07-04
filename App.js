@@ -13,8 +13,8 @@ import StackConfig from './src/navigation';
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <StackConfig />
+    <NavigationContainer nice="poker">
+      <StackConfig store="test" redux="redux" />
     </NavigationContainer>
   );
 };

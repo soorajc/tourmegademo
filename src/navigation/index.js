@@ -8,6 +8,8 @@ import SearchTours from '../screens/searchtours';
 
 const Stack = createStackNavigator();
 
+const Stack2 = testingCetner();
+
 const StackConfig = () => {
   return (
     <Stack.Navigator initialRouteName="SearchPlaces">
