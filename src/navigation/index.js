@@ -3,6 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import SearchPlaces from '../screens/searchplaces';
 import Destinations from '../screens/destinations';
+import Offers from '../screens/offers';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,11 @@ const StackConfig = () => {
       <Stack.Screen
         name="Destinations"
         component={Destinations}
+        options={{headerShown: true, headerTitle: ''}}
+      />
+      <Stack.Screen
+        name="Offers"
+        component={Offers}
         options={{headerShown: true, headerTitle: ''}}
       />
     </Stack.Navigator>
