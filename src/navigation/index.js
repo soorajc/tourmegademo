@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import SearchPlaces from '../screens/searchplaces';
 import Destinations from '../screens/destinations';
 import Offers from '../screens/offers';
+import SearchTours from '../screens/searchtours';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,11 @@ const StackConfig = () => {
       <Stack.Screen
         name="Offers"
         component={Offers}
+        options={{headerShown: true, headerTitle: ''}}
+      />
+      <Stack.Screen
+        name="SearchTours"
+        component={SearchTours}
         options={{headerShown: true, headerTitle: ''}}
       />
     </Stack.Navigator>
